@@ -14,11 +14,11 @@ app.use(morgan(morganOption));
 app.use(helmet());
 app.use(cors());
 
-app.get('/', (req, res, next) => {
+app.get('/', (req, res, next) => { // eslint-disable-line no-unused-vars
   res.send('Hello, world!');
 });
 
-app.use(function errorHandler(error, req, res, next) {
+app.use(function errorHandler(error, req, res, next) { // eslint-disable-line no-unused-vars
   let response;
   if (NODE_ENV === 'production') {
     response = { error: { message: 'server error'}};
